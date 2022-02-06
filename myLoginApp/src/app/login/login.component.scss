@@ -1,0 +1,124 @@
+.app-login {
+    width: 100%;
+
+    .shape-style {
+        position: relative;
+
+        &.shape-top {
+            &::before {
+                content: "";
+                width: 110px;
+                height: 110px;
+                background: #407bff;
+                position: fixed;
+                top: -40px;
+                left: -40px;
+                z-index: 9;
+                border-radius: 100px;
+                opacity: 0.1;
+            }
+            &::after {
+                content: "";
+                width: 50px;
+                height: 50px;
+                background: #407bff;
+                position: fixed;
+                z-index: 9;
+                border-radius: 100px;
+                opacity: 0.2;
+                top: -10px;
+                left: 40px;
+            }
+        }
+        &.shape-bottom {
+            &::before {
+                content: "";
+                width: 110px;
+                height: 110px;
+                background: #407bff;
+                position: fixed;
+                bottom: -40px;
+                right: -40px;
+                z-index: 9;
+                border-radius: 100px;
+                opacity: 0.1;
+            }
+            &::after {
+                content: "";
+                width: 50px;
+                height: 50px;
+                background: #407bff;
+                position: fixed;
+                z-index: 9;
+                border-radius: 100px;
+                opacity: 0.2;
+                bottom: -10px;
+                right: 40px;
+            }
+        }
+    }
+
+    .cover-image {
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 40px;
+        display: block;
+        text-align: center;
+
+        .cover-bg {
+            height: 30vh;
+        }
+    }
+
+    .login-form {
+        padding: 40px 10.6vw;
+        width: 100%;
+
+        .welcome-content {
+            position: relative;
+            margin-bottom: 20px;
+            .welcome-title {
+                margin-top: 0;
+                color: #121212;
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+
+            .welcome-txt {
+                margin-top: 0;
+                font-size: 14px;
+                color: #b9bec6;
+                line-height: 23px;
+            }
+        }
+
+        .form-group {
+            position: relative;
+
+            .form-control {
+                color: #37474f;
+                --padding-start: 40px !important;
+                font-size: 14px;
+            }
+
+            .ip-icon {
+                position: absolute;
+                z-index: 9;
+                margin-left: 8px;
+                font-size: 22px;
+                color: #37474f;
+            }
+
+            .eye-icon {
+                font-size: 20px;
+                color: #37474f;
+            }
+        }
+        .submit-btn {
+            margin: 0;
+        }
+        .progress-bar {
+            margin-top: 30px;
+        }
+    }
+}

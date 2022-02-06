@@ -24,3 +24,33 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+ion-item {
+    --highlight-color-invalid: red; // invalid underline color
+    --highlight-color-valid: #3880ff; // valid underline color
+
+        &.item-has-foucs {
+            --border-color: #3880ff;
+        }
+}
+
+.form-field {
+    --inner-padding-end: 0px;
+    position: relative;
+    --padding-start: 0;
+    --padding-end: 0;
+    --padding-top: 0;
+    --padding-bottom: 0;
+    --background-focused: transparent;
+}
+.form-group {
+    width: 100%;
+    margin-bottom: 2.463vh;
+}
+
+.error-message {
+    font-size: 14px;
+    color: red;
+    margin: 10px 0;
+    text-align: right;
+}

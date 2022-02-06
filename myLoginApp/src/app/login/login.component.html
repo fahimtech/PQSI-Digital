@@ -1,0 +1,37 @@
+<ion-content class="app-login" [fullscreen]="true">
+  <div class="shape-style shape-top"></div>
+  <div class="shape-style shape-bottom"></div>
+  <div class="cover-image">
+    <img src="assets/images/mobile-login.svg" class="cover-bg" alt="image-not-found" />
+  </div>
+  <form class="login-form" [formGroup]="loginForm" (ngSubmit)="validateLogin()">
+    <div class="welcome-content">
+      <h3 class="welcome-title">Welcome Back 👋</h3>
+      <p class="welcome-txt">I am happy to see you again. You can continue where you left off by logging in</p>
+    </div>
+    <div class="form-group">
+      <ion-item class="form-field ion-no-padding">
+        <ion-icon class="ip-icon" name="at-outline" slot="start"></ion-icon>
+        <ion-input class="form-control" placeholder="Email Adress" type="email" formControlName="email"></ion-input>
+      </ion-item>
+      <p class="error-message" *ngIf="loginForm.controls['email'].errors && loginForm.controls['email'].dirty">
+        Invalid email.
+      </p>
+    </div>
+    <div class="form-group">
+      <ion-item class="form-field ion-no-padding">
+        <ion-icon class="ip-icon" name="key-outline" slot="start"></ion-icon>
+        <ion-input class="form-control" placeholder="Password" [type]="passwordType" formControlName="password">
+        </ion-input>
+        <ion-icon class="eye-icon" [name]="passwordIcon" slot="end" (click)='hideShowPassword()'></ion-icon>
+      </ion-item>
+      <p class="error-message">{{errorMessage}}</p>
+    </div>
+    <ion-button type="submit" class="submit-btn" color="primary" expand="block" shape="round" size="medium"
+      [disabled]="!loginForm.valid">Login
+    </ion-button>
+    <div class="progress-bar">
+      <ion-progress-bar color="primary" [value]="loadProgress"></ion-progress-bar>
+    </div>
+  </form>
+</ion-content>

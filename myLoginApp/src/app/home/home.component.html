@@ -1,0 +1,17 @@
+<ion-header class="app-header ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-title class="header-title">Home</ion-title>
+    <ion-button type="button" class="logout-btn" slot="end" expand="block" shape="round" size="small"
+      (click)="logout()">
+      Logout <ion-icon name="log-out-outline" class="logout-ic"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="app-home">
+  <div class="welcome-card">
+    <p class="welcome-msg">Welcome, You have successfully logged in 👏 </p>
+    <ion-button type="button" class="continue-btn" slot="right" expand="block" shape="round" size="medium"
+      color="primary">Continue
+    </ion-button>
+  </div>
+</ion-content>
