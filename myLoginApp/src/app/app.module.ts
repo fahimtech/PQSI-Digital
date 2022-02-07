@@ -11,12 +11,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginService } from 'src/services/login.service';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { AppService } from 'src/services/app.service';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, HomeComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, CommonModule, FormsModule, ReactiveFormsModule,],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, LoginService],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, CommonModule, FormsModule, ReactiveFormsModule, HttpClientModule],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, LoginService, AppService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }
