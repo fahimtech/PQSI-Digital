@@ -1,6 +1,6 @@
 # PQSI-Digital
 
-PQSI is Ionic with Angular Hybrid Application
+PQSI is a Ionic with Angular Hybrid Application
 
 Follow below step instruction to run this app.
 
